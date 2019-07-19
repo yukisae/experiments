@@ -1,0 +1,4 @@
+{
+    "detachKeys": "ctrl-q,ctrl-q",
+    "psFormat": "table {{.ID}}\\t{{.Names}}\\t{{.Image}}\\t{{.Command}}\\t{{.Status}}\\t{{.Ports}}\\t{{.Labels}}"
+}
