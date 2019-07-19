@@ -1,0 +1,12 @@
+{
+  "production": {
+    "urlAddPort": true,
+    "email": true,
+    "imageUploadType": "filesystem",
+    "sessionName": "connect.codimd.sid",
+    "db": {
+        "dialect": "sqlite",
+        "storage": "/codimd/sqlite/codimd.db"
+    }
+  }
+}

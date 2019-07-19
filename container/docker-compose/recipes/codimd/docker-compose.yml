@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  codimd:
+    build:
+      context: ./codimd
+    environment:
+      # define 'storage' option value
+      # see https://github.com/sequelize/cli/blob/7160d0/src/helpers/config-helper.js#L192
+      #- NODE_ENV=sqlite_env
+      #- CMD_LOGLEVEL=debug
+      - CMD_DB_URL=sqlite:///codimd/sqlite/codimd.db
+      - CMD_SESSION_SECRET=cmdssssecret
+      - CMD_CSP_ENABLE=false
+    ports:
+      - 3000:3000
+    volumes:
+      - sqlite_db:/files/sqlite
+
+
+volumes:
+  sqlite_db:
