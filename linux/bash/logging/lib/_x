@@ -1,5 +1,17 @@
 X_LIB_DIR=$(realpath "$(dirname "${BASH_SOURCE:-$0}")")
 
+if [ x"$BASH_VERSION" != x ]; then
+    if [ "$(realpath "$0")" == "$(realpath "$BASH_SOURCE")" ]; then
+        cat <<-EOM
+		Please execute this helper script with the relative path from the directory where you plan to create your script.
+		Then, add the next line to the beginning of it.
+
+		source "\$(dirname "\$(realpath "\$0")")/$0"
+		EOM
+        exit 1
+    fi
+fi
+
 source "$X_LIB_DIR/config.sh"
 source "$X_LIB_DIR/base.sh"
 source "$X_LIB_DIR/terminal.sh"
