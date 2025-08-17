@@ -1,0 +1,7 @@
+X_LIB_DIR=$(realpath "$(dirname "${BASH_SOURCE:-$0}")")
+
+source "$X_LIB_DIR/config.sh"
+source "$X_LIB_DIR/base.sh"
+source "$X_LIB_DIR/terminal.sh"
+source "$X_LIB_DIR/autolog.sh"
+source "$X_LIB_DIR/notebook.sh"
